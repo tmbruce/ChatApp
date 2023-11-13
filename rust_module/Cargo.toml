@@ -9,3 +9,4 @@ name = "rust_module"
 crate-type = ["staticlib"]
 
 [dependencies]
+jni = "0.21.1"
