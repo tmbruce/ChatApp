@@ -1,1 +1,1 @@
-declare module 'types/definitions/react-native-user-avatar';
+declare module 'react-native-user-avatar';

@@ -7,6 +7,7 @@ import {StackNavigation} from '../types';
 
 import {ChatThreadCard as ChatThreadCardType} from '../types';
 
+// const UserAvatar = require('react-native-user-avatar');
 import UserAvatar from 'react-native-user-avatar';
 import Badge from './badge';
 

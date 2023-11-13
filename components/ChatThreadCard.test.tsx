@@ -1,8 +1,6 @@
 import React from 'react';
-import {render, fireEvent} from '@testing-library/react-native';
+import {render} from '@testing-library/react-native';
 import ChatThreadCard from './ChatThreadCard';
-import {NavigationContainer, useNavigation} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
 
 // Mock the useNavigation hook
 jest.mock('@react-navigation/native', () => {
