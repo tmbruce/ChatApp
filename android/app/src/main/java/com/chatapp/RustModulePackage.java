@@ -3,7 +3,6 @@ package com.chatapp;
 //TODO: REMOVE LOGGING STATEMENTS
 import android.util.Log;
 
-
 import androidx.annotation.NonNull;
 
 import com.facebook.react.ReactPackage;
@@ -19,7 +18,7 @@ public class RustModulePackage implements ReactPackage {
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
-        Log.d("MyTag", "screateNativeModules is being run");
+        Log.d("MyTag", "createNativeModules is being run");
         List<NativeModule> modules = new ArrayList<>();
         modules.add(new RustModule(reactContext));
         return modules;
