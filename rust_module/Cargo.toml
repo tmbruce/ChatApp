@@ -5,7 +5,7 @@ edition = "2021"
 
 [lib]
 name = "rust_module"
-crate-type = ["staticlib", "staticlib"]
+crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
 jni = { version = "0.21.1", optional = true, default-features = false }
