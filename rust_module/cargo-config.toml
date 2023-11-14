@@ -1,0 +1,11 @@
+[target.aarch64-linux-android]
+linker = "/Library/Android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android33-clang"
+
+[target.arm-linux-androideabi]
+linker = "~/Library/Android/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/armv7a-linux-androideabi33-clang"
+
+[target.i686-linux-android]
+linker = "/Library/Android/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/i686-linux-android33-clang"
+
+[target.x86_64-linux-android]
+linker = "/Library/Android/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/x86_64-linux-android33-clang"

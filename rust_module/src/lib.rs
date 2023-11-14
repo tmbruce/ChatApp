@@ -9,7 +9,7 @@ pub extern "C" fn add_numbers(a: i32, b: i32) -> i32 {
 
 #[cfg(target_os = "android")]
 #[no_mangle]
-pub unsafe extern "C" fn Java_com_reactnativepro_RustModule_nativeAddNumbers(
+pub unsafe extern "C" fn Java_com_chatapp_RustModule_nativeAddNumbers(
     _env: JNIEnv,
     _class: JClass,
     a: jint,

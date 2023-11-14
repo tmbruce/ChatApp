@@ -5,7 +5,12 @@ edition = "2021"
 
 [lib]
 name = "rust_module"
-crate-type = ["staticlib"]
+crate-type = ["staticlib", "staticlib"]
 
 [dependencies]
-jni = "0.21.1"
+jni = { version = "0.21.1", optional = true, default-features = false }
+
+[features]
+default = ["jni"]
+
+# cargo ndk -t armeabi-v7a -t arm64-v8a -t x86_64 -o ./jniLibs build --release
