@@ -2,6 +2,9 @@
 
 BLUE='\033[1;34m'
 
+echo "${BLUE}Reconfiguring Cargo.toml file..."
+sed -i '' 's/cdylib/staticlib/g' ./rust_module/Cargo.toml
+
 clear
 cd rust_module
 rm -rf target

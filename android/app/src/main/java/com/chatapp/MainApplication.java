@@ -1,4 +1,6 @@
 package com.chatapp;
+//TODO: REMOVE LOGGING STATEMENTS
+import android.util.Log;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
@@ -12,8 +14,10 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
+
   private final ReactNativeHost mReactNativeHost =
       new DefaultReactNativeHost(this) {
+
         @Override
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
@@ -21,32 +25,36 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-          @SuppressWarnings("UnnecessaryLocalVariable")
+            Log.d("MyTag", "getPackages() is being run");
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
+          packages.add(new RustModulePackage());
           return packages;
         }
 
         @Override
         protected String getJSMainModuleName() {
-          return "index";
+            Log.d("MyTag", "getJSMainModuleName is being run");
+            return "index";
         }
 
         @Override
         protected boolean isNewArchEnabled() {
-          return BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
+            Log.d("MyTag", "isNewArchEnabled() is being run");
+            return BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
         }
 
         @Override
         protected Boolean isHermesEnabled() {
-          return BuildConfig.IS_HERMES_ENABLED;
+            Log.d("MyTag", "isHermesEnabled() is being run");
+            return BuildConfig.IS_HERMES_ENABLED;
         }
       };
 
   @Override
   public ReactNativeHost getReactNativeHost() {
-    return mReactNativeHost;
+      Log.d("MyTag", "getReactNativeHost() is being run");
+      return mReactNativeHost;
   }
 
   @Override
@@ -54,6 +62,7 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+        Log.d("MyTag", "onCreate() is being run");
       // If you opted-in for the New Architecture, we load the native entry point for this app.
       DefaultNewArchitectureEntryPoint.load();
     }

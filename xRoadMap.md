@@ -7,3 +7,6 @@
 ## Cryptography
 - [ ] Double Ratchet Algorithm
 - [ ] Secure Key Storage
+
+## UI Components
+- [ ] Image avatars
