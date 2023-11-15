@@ -27,4 +27,5 @@ for index in {1..${#ARCHS[@]}}; do
     #frm -rf $RUST_DIR/target/$arch
 done
 
+# This neat little script coppied from the interwebs works way better and is less verbose
 # cargo ndk -t armeabi-v7a -t arm64-v8a -t x86_64 -o ./jniLibs build --release
