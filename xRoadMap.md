@@ -10,3 +10,8 @@
 
 ## UI Components
 - [ ] Image avatars
+  
+## Features
+- [ ] Emergency back-out
+- [ ] Dark / Light theme
+- [ ] Adjust chat bubble color
