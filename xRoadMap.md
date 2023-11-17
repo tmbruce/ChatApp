@@ -15,3 +15,4 @@
 - [ ] Emergency back-out
 - [ ] Dark / Light theme
 - [ ] Adjust chat bubble color
+- [ ] Chat folders - https://telegram.org/blog/folders
