@@ -5,7 +5,7 @@ import LanguageDetector from 'i18next-react-native-language-detector';
 const resources = {
   en: {
     translation: {
-      messages: 'Messages!!!',
+      messages: 'Messages',
     },
   },
   es: {

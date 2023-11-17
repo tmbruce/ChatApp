@@ -10,6 +10,7 @@ import ThreadScreen from '../screens/ThreadScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const MainStackNavigator = () => {
+  // const {t} = useTranslation();
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -17,6 +18,7 @@ const MainStackNavigator = () => {
         component={Threads}
         options={{
           title: 'Messages',
+          // title: {t('messages')},
           headerLargeTitle: true,
         }}
       />
@@ -38,3 +40,5 @@ export {MainStackNavigator};
 // Additional setup for android required:
 // https://reactnavigation.org/docs/getting-started#installing-dependencies-into-a-bare-react-native-project
 // 'Add the highlighted code to the body of MainActivity Class'
+
+// Add i18n support for language translation

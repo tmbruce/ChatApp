@@ -7,13 +7,12 @@ import {StackNavigation} from '../types';
 
 import {ChatThreadCard as ChatThreadCardType} from '../types';
 
-// const UserAvatar = require('react-native-user-avatar');
 import UserAvatar from 'react-native-user-avatar';
 import Badge from './badge';
 
-interface Props {
+type Props = {
   chatThread: ChatThreadCardType;
-}
+};
 
 const windowWidth = Dimensions.get('window').width;
 
