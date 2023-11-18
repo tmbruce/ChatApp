@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {MainStackNavigator} from './navigation/AppNavigator';
+import Navigator from './navigation/AppNavigator';
 import RustModule from './rust_module';
 
 import {store} from './redux/store';
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <MainStackNavigator />
+        <Navigator />
       </NavigationContainer>
     </Provider>
   );

@@ -1,17 +1,22 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-export type RootStackParamList = {
-  ThreadScreen: {
+export type NavigationParamList = {
+  MainApp: {
+    threadId: string;
+    threadName: String;
+    message: String;
+  };
+  ChatScreen: {
     threadId: string;
     threadName: string;
     message: string;
   };
-  Threads: {
+  Chats: {
     threadId: string;
     threadName: string;
   };
 };
 
-export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
+export type StackNavigation = NativeStackNavigationProp<NavigationParamList>;
 
 // TODO: Modify RootStackParamList to reflect ts message type

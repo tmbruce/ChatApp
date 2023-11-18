@@ -10,8 +10,12 @@
 
 ## UI Components
 - [ ] Image avatars
+- [ ] Custom tab navigation
   
 ## Features
-- [ ] Emergency back-out
+- [ ] Emergency back-out button
 - [ ] Dark / Light theme
 - [ ] Adjust chat bubble color
+- [ ] Swipe to delete
+- [ ] Restore app state on launch with settings flag
+- [ ] Change app icon - https://www.npmjs.com/package/react-native-change-icon

@@ -1,31 +1,45 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../types';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {NavigationParamList} from '../types';
 
-import Threads from '../screens/Threads';
-import ThreadScreen from '../screens/ThreadScreen';
+import Chats from '../screens/Chats';
+import ChatScreen from '../screens/ChatScreen';
 
 // import {useTranslation} from 'react-i18next';
+const Tab = createBottomTabNavigator<NavigationParamList>();
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const TabNavigator = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Chats"
+        component={Chats}
+        options={{
+          headerTitleStyle: {alignSelf: 'flex-start'},
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
 
-const MainStackNavigator = () => {
-  // const {t} = useTranslation();
+const Stack = createNativeStackNavigator<NavigationParamList>();
+
+const Navigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Threads"
-        component={Threads}
+        name="MainApp"
+        component={TabNavigator}
         options={{
-          title: 'Messages',
-          // title: {t('messages')},
-          headerLargeTitle: true,
+          headerShown: false,
         }}
       />
       <Stack.Screen
-        name="ThreadScreen"
-        component={ThreadScreen}
+        name="ChatScreen"
+        component={ChatScreen}
         options={({route}) => ({
+          headerBackTitle: 'Chats',
           headerTitle: route.params.threadName as string,
           threadName: route.params.threadName as string,
         })}
@@ -34,7 +48,7 @@ const MainStackNavigator = () => {
   );
 };
 
-export {MainStackNavigator};
+export default Navigator;
 
 // TODO:
 // Additional setup for android required:
@@ -42,3 +56,8 @@ export {MainStackNavigator};
 // 'Add the highlighted code to the body of MainActivity Class'
 
 // Add i18n support for language translation
+// Type documentation:
+// https://www.i18next.com/overview/typescript
+
+// A nice simple idea for tab floating tab navigation:
+// https://www.youtube.com/watch?v=gPaBicMaib4

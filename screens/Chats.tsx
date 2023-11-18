@@ -6,7 +6,7 @@ import {RootState} from '../redux/store';
 import ChatThreadCard from '../components/ChatThreadCard';
 import {ChatThreadCard as ChatThreadCardType} from '../types';
 
-const Threads = () => {
+const Chats = () => {
   const {threads} = useSelector((state: RootState) => state.threads);
   return (
     <SafeAreaView>
@@ -21,4 +21,4 @@ const Threads = () => {
   );
 };
 
-export default Threads;
+export default Chats;
