@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, SafeAreaView} from 'react-native';
+import {FlatList, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {RootState} from '../redux/store';
 
@@ -9,7 +9,7 @@ import {ChatThreadCard as ChatThreadCardType} from '../types';
 const Chats = () => {
   const {threads} = useSelector((state: RootState) => state.threads);
   return (
-    <SafeAreaView>
+    <View>
       <FlatList
         data={threads}
         keyExtractor={(item: ChatThreadCardType, _: number) =>
@@ -17,7 +17,7 @@ const Chats = () => {
         }
         renderItem={({item}) => <ChatThreadCard chatThread={item} />}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 

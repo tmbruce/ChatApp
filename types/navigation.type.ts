@@ -6,6 +6,7 @@ export type NavigationParamList = {
     threadName: String;
     message: String;
   };
+  Contacts: {};
   ChatScreen: {
     threadId: string;
     threadName: string;

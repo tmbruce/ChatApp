@@ -5,13 +5,29 @@ import {NavigationParamList} from '../types';
 
 import Chats from '../screens/Chats';
 import ChatScreen from '../screens/ChatScreen';
+import Contacts from '../screens/Contacts';
 
 // import {useTranslation} from 'react-i18next';
 const Tab = createBottomTabNavigator<NavigationParamList>();
+const Stack = createNativeStackNavigator<NavigationParamList>();
 
 const TabNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarStyle: {
+          position: 'absolute',
+          bottom: 25,
+          left: 20,
+          right: 20,
+          elevation: 0,
+          borderRadius: 45,
+          backgroundColor: '#007AFF',
+          height: 90,
+        },
+        tabBarActiveTintColor: '#FFF',
+      }}>
+      <Tab.Screen name="Contacts" component={Contacts} />
       <Tab.Screen
         name="Chats"
         component={Chats}
@@ -22,8 +38,6 @@ const TabNavigator = () => {
     </Tab.Navigator>
   );
 };
-
-const Stack = createNativeStackNavigator<NavigationParamList>();
 
 const Navigator = () => {
   return (
