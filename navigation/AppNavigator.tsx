@@ -6,6 +6,7 @@ import {NavigationParamList} from '../types';
 import Chats from '../screens/Chats';
 import ChatScreen from '../screens/ChatScreen';
 import Contacts from '../screens/Contacts';
+import Settings from '../screens/Settings';
 
 // import {useTranslation} from 'react-i18next';
 const Tab = createBottomTabNavigator<NavigationParamList>();
@@ -23,7 +24,7 @@ const TabNavigator = () => {
           elevation: 0,
           borderRadius: 45,
           backgroundColor: '#007AFF',
-          height: 90,
+          height: 80,
         },
         tabBarActiveTintColor: '#FFF',
       }}>
@@ -35,6 +36,7 @@ const TabNavigator = () => {
           headerTitleStyle: {alignSelf: 'flex-start'},
         }}
       />
+      <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   );
 };

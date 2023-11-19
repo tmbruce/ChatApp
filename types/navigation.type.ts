@@ -16,6 +16,7 @@ export type NavigationParamList = {
     threadId: string;
     threadName: string;
   };
+  Settings: {};
 };
 
 export type StackNavigation = NativeStackNavigationProp<NavigationParamList>;
